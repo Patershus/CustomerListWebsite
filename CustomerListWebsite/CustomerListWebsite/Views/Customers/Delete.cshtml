@@ -5,7 +5,9 @@
 </head>
 <body>
     <header>
-        <a href="/customers/index">Hem</a>
+        <div class="headDiv">
+            <a href="/customers/index">Hem</a>
+        </div>
     </header>
     <h1>Are you sure you want to delete @ViewBag.Customer.CompanyName ?</h1>
     <form method="post" action="/customers/delete/@(ViewBag.Customer.Id)"><input  type="submit" value="YES!" /></form>

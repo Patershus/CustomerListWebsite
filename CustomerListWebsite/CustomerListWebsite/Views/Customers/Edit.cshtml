@@ -2,10 +2,13 @@
 <html>
 <head>
     <title>Edit customer</title>
+    <link href="~/MySheet.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <a href="/customers/index">Hem</a>
+        <div class="headDiv">
+            <a href="/customers/index">Hem</a>
+        </div>
     </header>
     <form method="post" action="/customers/edit/@ViewBag.Customer.Id">
         <label>Company name</label>

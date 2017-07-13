@@ -1,8 +1,17 @@
-﻿body {
-    vertical-align : central
+﻿body{
+    
+    padding-left: 20%;
+    align-content :center;
+
 }
 
 .myList{
-    align-content : center
+   
+    width : 100%;
+}
 
+.headDiv{
+   
+    height : 100px;
+    width :100%;    
 }
