@@ -1,38 +1,31 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Edit customer</title>
+    <title>Add Customer</title>
 </head>
 <body>
     <header>
         <a href="/customers/index">Hem</a>
     </header>
-    <form method="post" action="/customers/edit/@ViewBag.Customer.Id">
+    <form method="post" action="/customers/add">
         <label>Company name</label>
         <br />
-        <input type="text" value="@ViewBag.Customer.CompanyName" name="CompanyName" />
+        <input type="text"  name="CompanyName" />
         <br />
         <label>Adress</label>
         <br />
-        <input type="text" value="@ViewBag.Customer.Adress" name="Adress" />
+        <input type="text"  name="Adress" />
         <br />
         <label>Employee count</label>
         <br />
-        <input type="text" value="@ViewBag.Customer.EmployeeCount" name="EmployeeCount" />
+        <input type="text"  name="EmployeeCount" />
         <br />
         @*<label>Id</label>*@
         <br />
         @*<input type="hidden" value="@ViewBag.Customer.Id" name="Id" />
-        <br />*@
+            <br />*@
 
-        <input type="submit" value="Submit Edit" />
+        <input type="submit" value="Add customer" />
     </form>
-
-
-
-
-
-
-
 </body>
 </html>

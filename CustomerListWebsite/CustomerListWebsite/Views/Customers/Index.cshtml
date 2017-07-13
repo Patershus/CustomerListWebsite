@@ -6,6 +6,10 @@
     <title></title>
 </head>
 <body>
+    <header>
+        <a href="/customers/index">Hem</a>
+    </header>
+
     <h1>Customers</h1>
     <ul class="myList">
         @foreach (var item in ViewBag.Customers)
@@ -18,7 +22,7 @@
 
     </ul>
 
-
+    <a href="/customers/add"><button>Add Contact</button></a>
 
 
 </body>

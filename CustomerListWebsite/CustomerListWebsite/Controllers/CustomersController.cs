@@ -64,5 +64,19 @@ namespace CustomerListWebsite.Controllers
             DataManager.DeleteCustomer(customer.Id);
             return RedirectToAction(nameof(CustomersController.Index));
         }
+
+        [HttpGet]
+        public IActionResult Add()
+        {
+            
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Add(Customer customer)
+        {
+            DataManager.AddCustomer(customer);
+            return RedirectToAction(nameof(CustomersController.Index));
+        }
     }
 }
