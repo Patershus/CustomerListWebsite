@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Customers</h1>
+    <ul>
+        @foreach (var item in ViewBag.Customers)
+        {
+            <li>@item.CompanyName (@item.EmployeeCount)<form action="/customers/edit"><input type="submit" value="Edit" /></form></li>
+        }
+
+
+
+    </ul>
+
+
+
+
+</body>
+</html>
