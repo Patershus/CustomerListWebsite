@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Are you sure</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete @ViewBag.Customer.CompanyName ?</h1>
+    <form method="post" action="/customers/delete/@(ViewBag.Customer.Id)"><input  type="submit" value="YES!" /></form>
+    <form action="/customers/index" ><input type="submit" value="NO!" /></form>
+
+
+</body>
+</html>

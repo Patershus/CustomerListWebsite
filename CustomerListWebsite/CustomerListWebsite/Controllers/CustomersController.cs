@@ -33,5 +33,36 @@ namespace CustomerListWebsite.Controllers
             DataManager.AddCustomer(customer);
             return RedirectToAction(nameof(CustomersController.Index));
         }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var customer = DataManager.GetOneCustomer(id);
+            ViewData["Customer"] = customer;
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Customer customer)
+        {
+           
+            DataManager.EditCustomer(customer, customer.Id);
+            return RedirectToAction(nameof(CustomersController.Index));
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var customer = DataManager.GetOneCustomer(id);
+            ViewData["Customer"] = customer;
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Customer customer)
+        {
+            DataManager.DeleteCustomer(customer.Id);
+            return RedirectToAction(nameof(CustomersController.Index));
+        }
     }
 }

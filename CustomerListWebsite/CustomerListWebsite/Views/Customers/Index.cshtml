@@ -1,14 +1,17 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <script src="~/MyScript.js"></script>
+    <link href="~/MySheet.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
     <h1>Customers</h1>
-    <ul>
+    <ul class="myList">
         @foreach (var item in ViewBag.Customers)
         {
-            <li>@item.CompanyName (@item.EmployeeCount)<form action="/customers/edit"><input type="submit" value="Edit" /></form></li>
+            <li>@item.CompanyName (@item.EmployeeCount)<a href="/customers/edit/@item.Id"><button>Edit</button></a><a href="/customers/delete/@item.Id"><button>Delete</button></a></li>
+            
         }
 
 

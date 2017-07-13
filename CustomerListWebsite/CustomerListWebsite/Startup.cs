@@ -24,6 +24,7 @@ namespace CustomerListWebsite
         {
             app.UseDeveloperExceptionPage();
             app.UseMvcWithDefaultRoute();
+            app.UseStaticFiles();
         }
     }
 }

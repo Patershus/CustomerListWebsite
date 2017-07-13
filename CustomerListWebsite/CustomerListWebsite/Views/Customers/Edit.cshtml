@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit customer</title>
+</head>
+<body>
+
+    <form method="post" action="/customers/edit/@ViewBag.Customer.Id">
+        <label>Company name</label>
+        <br />
+        <input type="text" value="@ViewBag.Customer.CompanyName" name="CompanyName" />
+        <br />
+        <label>Adress</label>
+        <br />
+        <input type="text" value="@ViewBag.Customer.Adress" name="Adress" />
+        <br />
+        <label>Employee count</label>
+        <br />
+        <input type="text" value="@ViewBag.Customer.EmployeeCount" name="EmployeeCount" />
+        <br />
+        @*<label>Id</label>*@
+        <br />
+        @*<input type="hidden" value="@ViewBag.Customer.Id" name="Id" />
+        <br />*@
+
+        <input type="submit" value="Submit Edit" />
+    </form>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -31,5 +31,27 @@ namespace CustomerListWebsite.Models
             lastId++;
 
         }
+
+        internal static Customer GetOneCustomer(int id)
+        {
+
+            return customers.Single(c => c.Id == id);
+        }
+
+        internal static void EditCustomer(Customer customerToEdit, int id)
+        {
+            var tempCustomer =customers
+                .Single(c => c.Id == id);
+
+            tempCustomer.Adress = customerToEdit.Adress;
+            tempCustomer.CompanyName = customerToEdit.CompanyName;
+            tempCustomer.EmployeeCount = customerToEdit.EmployeeCount;
+
+        }
+
+        internal static void DeleteCustomer(int id)
+        {
+            customers.RemoveAll(c => c.Id ==id);
+        }
     }
 }
